@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#"
+     xml:base="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CRIC-WS="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS">
+        <rdfs:comment>Prototype of a CRIC Dataset Ontology made with Protege.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasSite">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasTierLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasTierLevel">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#TierLevels"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasVoName -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasVoName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#providedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#providedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#usedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#usedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ATLASSite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ATLASSite">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ExperimentSite"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasVoName"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#atlas"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#CMSSite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#CMSSite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#CMSSite">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ExperimentSite"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasVoName"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#cms"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ExperimentSite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#ExperimentSite">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#hasVoName"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#voName"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Resource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Resource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#providedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#providedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#TierLevels -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#TierLevels">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier0"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier1"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier2"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier3"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#voName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#voName">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#alice"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#atlas"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#cms"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#lhcb"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#CNAF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#CNAF">
+        <hasSite rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1"/>
+        <hasVoName rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#alice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1-ATLAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1-ATLAS">
+        <hasSite rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1"/>
+        <hasTierLevel rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier1"/>
+        <hasVoName rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#atlas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#T1_IT_CNAF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#T1_IT_CNAF">
+        <hasSite rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#INFN-T1"/>
+        <hasVoName rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#cms"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier0"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Tier3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#TierLevels"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#voName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#atlas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#atlas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#cms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#cms"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#lhcb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#lhcb"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Resource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Service"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rossitisbeni/ontologies/2022/9/CRIC-WS#Site"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
