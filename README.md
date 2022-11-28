@@ -15,8 +15,8 @@ The ontology has been built with [Protégé 5.5.0](https://github.com/protegepro
 ## Repository structure
 
 This repository contains:
-- The OWL ontology: <CRIC-WS.owl> 
-- pdf report for the project: [WS-CRIC.pdf]
-- The transformation rules used to import the data from a spreadsheet export of relational data: [TransformationRules.json];
-- A few notebooks used to parse non relational json data: [facility-parser.ipynb] and [resource-parser.ipynb].
+- The OWL ontology: [CRIC-WS.owl](CRIC-WS.owl) 
+- pdf report for the project: [WS-CRIC.pdf](WS-CRIC.pdf)
+- The transformation rules used to import the data from a spreadsheet export of relational data: [TransformationRules.json](TransformationRules.json);
+- A few notebooks used to parse non relational json data: [facility-parser.ipynb](facility-parser.ipynb) and [resource-parser.ipynb](resource-parser.ipynb).
 
