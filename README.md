@@ -10,5 +10,13 @@ A Domain Mapping approach based on Mapping Master was used as a prototype implem
 
 ## Built with
 
-* [![Protégé][Protégé]][Protégé-url]
+The ontology has been built with [Protégé 5.5.0](https://github.com/protegeproject/protege) with the [Cellfie plugin](https://github.com/protegeproject/cellfie-plugin).
+
+## Repository structure
+
+This repository contains:
+- The OWL ontology: [CRIC-WS.owl] 
+- pdf report for the project: [WS-CRIC.pdf]
+- The transformation rules used to import the data from a spreadsheet export of relational data: [TransformationRules.json];
+- A few notebooks used to parse non relational json data: [facility-parser.ipynb] and [resource-parser.ipynb].
 
